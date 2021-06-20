@@ -52,6 +52,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
                                 <th data-sortable="true">Firstname</td>
                                 <th data-sortable="true">Lastname</td>
                                 <th data-sortable="true">Message</td>
+                                <th data-sortable="true">Created at</td>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -61,7 +62,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
                                     echo "<tr>";
                                     echo "<td>".$res['firstname']."</td>";
                                     echo "<td>".$res['lastname']."</td>";
-                                    echo "<td>".$res['message']."</td>";	
+                                    echo "<td>".$res['message']."</td>";
+                                    echo "<td>".$res['created_at']."</td>";	
                                     echo "<td><a href=\"edit.php?id=$res[id]\" class=\"btn btn-xs btn-primary\">Edit</a><a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\" class=\"btn btn-xs btn-danger\">Delete</a></td>";		
                                 }
                             ?>
