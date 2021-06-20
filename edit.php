@@ -9,8 +9,20 @@
 						
 		$firstname = mysqli_real_escape_string($mysqli, $_POST['firstname']);
 		$lastname = mysqli_real_escape_string($mysqli, $_POST['lastname']);
-		$message = mysqli_real_escape_string($mysqli, $_POST['message']);	
+		$message = mysqli_real_escape_string($mysqli, $_POST['message']);
+		
+		// checking empty fields
+		if(!empty($firstname) || !empty($age) || !empty($email)) {	
+		
+			//updating the table
+			$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
+			
+			//redirectig to the display page. In our case, it is index.php
+			header("Location: guestbook.php");
+		}
+	
 	}
+
 ?>
 
 <?php
@@ -80,13 +92,6 @@ while($res = mysqli_fetch_array($result))
 					if(empty($message)) {
 						echo "<font color='red'>Message field is empty.</font><br/>";
 					}		
-				} else {	
-					//updating the table
-					$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
-									
-					//redirectig to the display page. In our case, it is index.php
-					header("Location: /guestbook.php");
-				}
 			?>
 			
 
