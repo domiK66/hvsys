@@ -41,7 +41,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
                 </div>
             </nav>
         </div>
-		
+        <div class="container" style="margin-top: 5rem;">
 		<a href="add.html">Add New Data</a><br/><br/>
 
 		<table width='80%' border=0>
@@ -60,5 +60,6 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
 			}
 			?>
 			</table>
+        </div>
 </body>
 </html>
