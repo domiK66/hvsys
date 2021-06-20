@@ -13,6 +13,17 @@
 		
 		// checking empty fields
 		if(empty($firstname) || empty($age) || empty($email)) {	
+			if(empty($firstname)) {
+				echo "<font color='red'>Firstname field is empty.</font><br/>";
+				}
+									
+				if(empty($lastname)) {
+					echo "<font color='red'>Lastname field is empty.</font><br/>";
+				}
+									
+				if(empty($message)) {
+					echo "<font color='red'>Message field is empty.</font><br/>";
+				}	
 		} else {
 			//updating the table
 			$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
@@ -75,24 +86,6 @@ while($res = mysqli_fetch_array($result))
         <div class="container" role="main">
 			<br/><br/>
 			<h1>Edit Data</h1>
-
-			<?php
-					// checking empty fields
-				if(empty($firstname) || empty($age) || empty($email)) {	
-										
-					if(empty($firstname)) {
-					echo "<font color='red'>Firstname field is empty.</font><br/>";
-					}
-										
-					if(empty($lastname)) {
-						echo "<font color='red'>Lastname field is empty.</font><br/>";
-					}
-										
-					if(empty($message)) {
-						echo "<font color='red'>Message field is empty.</font><br/>";
-					}		
-			?>
-			
 
 			<form action="edit.php" method="post" name="form1">
 				<table width="25%" border="0">
