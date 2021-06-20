@@ -11,7 +11,7 @@ include_once("config.php");
 if(isset($_POST['Submit'])) {	
 	$firstname = mysqli_real_escape_string($mysqli, $_POST['firstname']);
 	$lastname = mysqli_real_escape_string($mysqli, $_POST['lastname']);
-	$email = mysqli_real_escape_string($mysqli, $_POST['message']);
+	$message = mysqli_real_escape_string($mysqli, $_POST['message']);
 		
 	// checking empty fields
 	if(empty($firstname) || empty($lastname) || empty($message)) {
