@@ -87,19 +87,22 @@ while($res = mysqli_fetch_array($result))
 				<table width="25%" border="0">
 					<tr> 
 						<td>Firstname</td>
-						<td><input type="text" name="firstname" value="<?php echo $firstname;?>"></td>
+						<td><input class="form-control type="text" name="firstname" value="<?php echo $firstname;?>"></td>
 					</tr>
 					<tr> 
 						<td>Lastname</td>
-						<td><input type="text" name="lastname" value="<?php echo $lastname;?>"></td>
+						<td><input class="form-control type="text" name="lastname" value="<?php echo $lastname;?>"></td>
 					</tr>
 					<tr> 
 						<td>Message</td>
-						<td><input type="text" name="email" value="<?php echo $message;?>"></td>
+						<td><input class="form-control type="text" name="email" value="<?php echo $message;?>"></td>
 					</tr>
 					<tr>
 						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
-						<td><input type="submit" name="update" value="Update"></td>
+						<td>
+							<input class="btn btn-success mt-4" type="submit" name="update" value="Update">
+							<a class="btn btn-primary mt-4" href="guestbook.php">Back</a>
+						</td>
 					</tr>
 				</table>
 			</form>
