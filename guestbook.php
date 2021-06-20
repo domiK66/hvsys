@@ -16,12 +16,12 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="/">HVSYS Project</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="container-xl">
+                <a class="navbar-brand" href="/">HVSYS_Project_1_15</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse" id="navbarsExample07XL">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home</a>
@@ -31,6 +31,9 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/snake.html">Snake Game JS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/domiK66/hvsys">Github</a>
                         </li>
                     </ul>
                 </div>

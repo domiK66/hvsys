@@ -57,13 +57,13 @@ while($res = mysqli_fetch_array($result))
         <title>HVSYS Edit Data</title>
     </head>
     <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container">
-                <a class="navbar-brand" href="/">HVSYS Project</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-xl">
+                <a class="navbar-brand" href="/">HVSYS_Project_1_15</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07XL" aria-controls="navbarsExample07XL">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse" id="navbarsExample07XL">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active">
                             <a class="nav-link" href="/">Home</a>
@@ -73,6 +73,9 @@ while($res = mysqli_fetch_array($result))
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/snake.html">Snake Game JS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/domiK66/hvsys">Github</a>
                         </li>
                     </ul>
                 </div>
@@ -107,7 +110,14 @@ while($res = mysqli_fetch_array($result))
 					</tr>
 				</table>
 			</form>
+
+			<p class="mt-4">Project by Dominik Kainz, Mensur Bukarevic & Lukas Dworacek
+            </p>
+            <p>Copyright by <a href="https://www.fh-joanneum.at">www.fh-joanneum.at</a></p>
 		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
 	</body>
 </html>
 
