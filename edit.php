@@ -1,40 +1,4 @@
 <?php
-// including the database connection file
-include_once("config.php");
-
-if(isset($_POST['update']))
-{	
-
-	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
-	
-	$firstname = mysqli_real_escape_string($mysqli, $_POST['firstname']);
-	$lastname = mysqli_real_escape_string($mysqli, $_POST['lastname']);
-	$message = mysqli_real_escape_string($mysqli, $_POST['message']);	
-	
-	// checking empty fields
-	if(empty($firstname) || empty($age) || empty($email)) {	
-			
-		if(empty($firstname)) {
-			echo "<font color='red'>Firstname field is empty.</font><br/>";
-		}
-		
-		if(empty($lastname)) {
-			echo "<font color='red'>Lastname field is empty.</font><br/>";
-		}
-		
-		if(empty($message)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
-		}		
-	} else {	
-		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
-		
-		//redirectig to the display page. In our case, it is index.php
-		header("Location: guestbook.php");
-	}
-}
-?>
-<?php
 //getting id from url
 $id = $_GET['id'];
 
@@ -85,6 +49,43 @@ while($res = mysqli_fetch_array($result))
         <div class="container" role="main">
 			<br/><br/>
 			<h1>Edit Data</h1>
+
+			<?php
+				// including the database connection file
+				include_once("config.php");
+
+				if(isset($_POST['update']))
+				{	
+
+					$id = mysqli_real_escape_string($mysqli, $_POST['id']);
+					
+					$firstname = mysqli_real_escape_string($mysqli, $_POST['firstname']);
+					$lastname = mysqli_real_escape_string($mysqli, $_POST['lastname']);
+					$message = mysqli_real_escape_string($mysqli, $_POST['message']);	
+					
+					// checking empty fields
+					if(empty($firstname) || empty($age) || empty($email)) {	
+							
+						if(empty($firstname)) {
+							echo "<font color='red'>Firstname field is empty.</font><br/>";
+						}
+						
+						if(empty($lastname)) {
+							echo "<font color='red'>Lastname field is empty.</font><br/>";
+						}
+						
+						if(empty($message)) {
+							echo "<font color='red'>Message field is empty.</font><br/>";
+						}		
+					} else {	
+						//updating the table
+						$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
+						
+						//redirectig to the display page. In our case, it is index.php
+						header("Location: guestbook.php");
+					}
+				}
+				?>
 			
 
 			<form action="edit.php" method="post" name="form1">
@@ -99,7 +100,7 @@ while($res = mysqli_fetch_array($result))
 					</tr>
 					<tr> 
 						<td>Message</td>
-						<td><input class="form-control type="text" name="email" value="<?php echo $message;?>"></td>
+						<td><input class="form-control type="text" name="message" value="<?php echo $message;?>"></td>
 					</tr>
 					<tr>
 						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
