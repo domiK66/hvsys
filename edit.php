@@ -80,8 +80,9 @@ while($res = mysqli_fetch_array($result))
         </nav>
         
         <div class="container" role="main">
-			
 			<br/><br/>
+			<h1>Edit Data</h1>
+			
 
 			<form action="edit.php" method="post" name="form1">
 				<table width="25%" border="0">

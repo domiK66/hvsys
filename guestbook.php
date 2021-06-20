@@ -38,7 +38,8 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
         </nav>
 
         <div class="container" role="main">
-            <h1> PHP-MYSQL Create Read Update Delete </h1>
+            <br/><br/>
+            <h1>PHP-MYSQL C-R-U-D Guestbook</h1>
 		    <a href="add.html" class="btn btn-xs btn-success mt-4">Add New Data</a><br/><br/>
             <div class="row">
                 <div class="col-md-12 col-md-offset-1">
