@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <title>HVSYS secure webserver</title>
+        <title>HVSYS Add Data - Result</title>
     </head>
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
@@ -63,8 +63,8 @@
 					$result = mysqli_query($mysqli, "INSERT INTO users(firstname,lastname,message) VALUES('$firstname','$lastname','$message')");
 					
 					//display success message
-					echo "<font color='green'>Data added successfully.";
-					echo "<br/><a href='guestbook.php'>View Results</a>";
+					echo "<font color='green'>Data added successfully.</font>";
+					echo "<br/><a href='guestbook.php' class='btn btn-xs btn-success mt-4'>View Results</a>";
 				}
 			}
 			?>
