@@ -38,10 +38,10 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
         </nav>
 
         <div class="container" role="main">
-
-		    <a href="add.html" class="btn btn-xs btn-success">Add New Data</a><br/><br/>
+            <h1> PHP-MYSQL Create Read Update Delete <h1>
+		    <a href="add.html" class="btn btn-xs btn-success mt-4">Add New Data</a><br/><br/>
             <div class="row">
-                <div class="col-md-10 col-md-offset-1">
+                <div class="col-md-12 col-md-offset-1">
                     <table data-toggle="table" class="table table-striped">
                         <thead>
                             <tr>
@@ -58,7 +58,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM users ORDER BY id DESC"); // usin
                                     echo "<td>".$res['firstname']."</td>";
                                     echo "<td>".$res['lastname']."</td>";
                                     echo "<td>".$res['message']."</td>";	
-                                    echo "<td><a href=\"edit.php?id=$res[id]\" class=\"btn btn-xs btn-primary\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\" class=\"btn btn-xs btn-danger\">Delete</a></td>";		
+                                    echo "<td><a href=\"edit.php?id=$res[id]\" class=\"btn btn-xs btn-primary\">Edit</a><a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Are you sure you want to delete?')\" class=\"btn btn-xs btn-danger\">Delete</a></td>";		
                                 }
                             ?>
                         </tbody>
