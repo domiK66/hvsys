@@ -85,7 +85,7 @@ while($res = mysqli_fetch_array($result))
 					$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
 									
 					//redirectig to the display page. In our case, it is index.php
-					header("Location: guestbook.php");
+					header("Location: /guestbook.php");
 				}
 			?>
 			
