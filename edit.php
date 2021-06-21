@@ -13,6 +13,7 @@
 		
 		// checking empty fields
 		if(empty($firstname) || empty($age) || empty($message)) {	
+			echo "haha1";
 			if(empty($firstname)) {
 				echo "<font color='red'>Firstname field is empty.</font><br/>";
 			}
@@ -27,7 +28,7 @@
 		} else {
 			//updating the table
 			$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
-			echo "haha";
+			echo "haha2";
 			header("Location: guestbook.php");
 		}
 	
