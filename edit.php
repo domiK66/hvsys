@@ -27,6 +27,8 @@
 		} else {
 			//updating the table
 			$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
+			echo "haha";
+			header("Location: guestbook.php");
 		}
 	
 	}
@@ -109,9 +111,9 @@ while($res = mysqli_fetch_array($result))
 				</table>
 			</form>
 
-			<p class="mt-4">Project by Dominik Kainz, Mensur Bukarevic & Lukas Dworacek
-            </p>
+			<p class="mt-4">Project by Dominik Kainz, Mensur Bukarevic & Lukas Dworacek</p>
             <p>Copyright by <a href="https://www.fh-joanneum.at">www.fh-joanneum.at</a></p>
+
 		</div>
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>

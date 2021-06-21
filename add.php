@@ -58,7 +58,7 @@
 					}
 					
 					//link to the previous page
-					echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
+					echo "<br/><a class='btn btn-xs btn-danger mt-4' href='javascript:self.history.back();'>Go Back</a>";
 				} else { 
 					// if all the fields are filled (not empty) 
 						
@@ -72,8 +72,7 @@
 			}
 			?>
 
-            <p class="mt-4">Project by Dominik Kainz, Mensur Bukarevic & Lukas Dworacek
-            </p>
+            <p class="mt-4">Project by Dominik Kainz, Mensur Bukarevic & Lukas Dworacek</p>
             <p>Copyright by <a href="https://www.fh-joanneum.at">www.fh-joanneum.at</a></p>
 
         </div>
