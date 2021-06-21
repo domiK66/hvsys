@@ -2,7 +2,7 @@
 	// including the database connection file
 	include_once("config.php");
 
-	if(isset($_POST['Update']))
+	if(isset($_POST['update']))
 	{	
 
 		$id = mysqli_real_escape_string($mysqli, $_POST['id']);
@@ -100,9 +100,9 @@ while($res = mysqli_fetch_array($result))
 						<td><input class="form-control" type="text" name="message" value="<?php echo $message;?>"></td>
 					</tr>
 					<tr>
-						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
+						<td><input type="hidden" name="id" value="<?php echo $_GET['id'];?>"></td>
 						<td>
-							<input class="btn btn-success mt-4" type="submit" name="Update" value="Edit">
+							<input class="btn btn-success mt-4" type="submit" name="update" value="Update">
 							<a class="btn btn-primary mt-4" href="guestbook.php">Back</a>
 						</td>
 					</tr>
