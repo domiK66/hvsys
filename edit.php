@@ -27,8 +27,8 @@
 			}	
 		} else {
 			//updating the table
-			$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
-			echo "haha2";
+			$result = mysqli_query($mysqli, "UPDATE users SET firstname=$firstname,lastname=$lastname,message=$message WHERE id=$id");
+			echo "<p>haha2</p>";
 			header("Location: guestbook.php");
 		}
 	
