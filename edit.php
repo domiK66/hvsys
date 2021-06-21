@@ -46,10 +46,10 @@ while($res = mysqli_fetch_array($result))
 {
 	$firstname = $res['firstname'];
 	$lastname = $res['lastname'];
-	$message= $res['message'];
+	$message = $res['message'];
 }
 ?>
-<!DOCTYPE html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -104,7 +104,7 @@ while($res = mysqli_fetch_array($result))
 					<tr>
 						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
 						<td>
-							<button class="btn btn-success mt-4" type="submit" name="Update" value="Add">
+							<input class="btn btn-success mt-4" type="submit" name="Update" value="Edit">
 							<a class="btn btn-primary mt-4" href="guestbook.php">Back</a>
 						</td>
 					</tr>
