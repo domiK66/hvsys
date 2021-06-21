@@ -12,7 +12,7 @@
 		$message = mysqli_real_escape_string($mysqli, $_POST['message']);
 		
 		// checking empty fields
-		if(empty($firstname) || empty($age) || empty($message)) {	
+		if(empty($firstname) || empty($lastname) || empty($message)) {	
 			echo "haha1";
 			if(empty($firstname)) {
 				echo "<font color='red'>Firstname field is empty.</font><br/>";
