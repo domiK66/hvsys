@@ -89,15 +89,15 @@ while($res = mysqli_fetch_array($result))
 				<table border="0">
 					<tr> 
 						<td>Firstname</td>
-						<td><input class="form-control type="text" name="firstname" value="<?php echo $firstname;?>"></td>
+						<td><input class="form-control" type="text" name="firstname" value="<?php echo $firstname;?>"></td>
 					</tr>
 					<tr> 
 						<td>Lastname</td>
-						<td><input class="form-control type="text" name="lastname" value="<?php echo $lastname;?>"></td>
+						<td><input class="form-control" type="text" name="lastname" value="<?php echo $lastname;?>"></td>
 					</tr>
 					<tr> 
 						<td>Message</td>
-						<td><input class="form-control type="text" name="message" value="<?php echo $message;?>"></td>
+						<td><input class="form-control" type="text" name="message" value="<?php echo $message;?>"></td>
 					</tr>
 					<tr>
 						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
