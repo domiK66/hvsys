@@ -12,7 +12,7 @@
 		$message = mysqli_real_escape_string($mysqli, $_POST['message']);
 		
 		// checking empty fields
-		if(empty($firstname) || empty($age) || empty($email)) {	
+		if(empty($firstname) || empty($age) || empty($message)) {	
 			if(empty($firstname)) {
 				echo "<font color='red'>Firstname field is empty.</font><br/>";
 			}
@@ -87,7 +87,7 @@ while($res = mysqli_fetch_array($result))
 			<br/><br/>
 			<h1>Edit Data</h1>
 
-			<form action="edit.php" method="post" name="form1">
+			<form action="" method="post" name="form1">
 				<table border="0">
 					<tr> 
 						<td>Firstname</td>
