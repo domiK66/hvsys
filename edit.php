@@ -2,7 +2,7 @@
 	// including the database connection file
 	include_once("config.php");
 
-	if(isset($_POST['update']))
+	if(isset($_POST['Update']))
 	{	
 
 		$id = mysqli_real_escape_string($mysqli, $_POST['id']);
@@ -15,15 +15,15 @@
 		if(empty($firstname) || empty($age) || empty($email)) {	
 			if(empty($firstname)) {
 				echo "<font color='red'>Firstname field is empty.</font><br/>";
-				}
+			}
 									
-				if(empty($lastname)) {
-					echo "<font color='red'>Lastname field is empty.</font><br/>";
-				}
+			if(empty($lastname)) {
+				echo "<font color='red'>Lastname field is empty.</font><br/>";
+			}
 									
-				if(empty($message)) {
-					echo "<font color='red'>Message field is empty.</font><br/>";
-				}	
+			if(empty($message)) {
+				echo "<font color='red'>Message field is empty.</font><br/>";
+			}	
 		} else {
 			//updating the table
 			$result = mysqli_query($mysqli, "UPDATE users SET firstname='$firstname',lastname='$lastname',message='$message' WHERE id=$id");
@@ -88,7 +88,7 @@ while($res = mysqli_fetch_array($result))
 			<h1>Edit Data</h1>
 
 			<form action="edit.php" method="post" name="form1">
-				<table width="25%" border="0">
+				<table border="0">
 					<tr> 
 						<td>Firstname</td>
 						<td><input class="form-control type="text" name="firstname" value="<?php echo $firstname;?>"></td>
@@ -104,7 +104,7 @@ while($res = mysqli_fetch_array($result))
 					<tr>
 						<td><input type="hidden" name="id" value=<?php echo $_GET['id'];?>></td>
 						<td>
-							<input class="btn btn-success mt-4" type="submit" name="update" value="Update">
+							<button class="btn btn-success mt-4" type="submit" name="Update" value="Add">
 							<a class="btn btn-primary mt-4" href="guestbook.php">Back</a>
 						</td>
 					</tr>
